@@ -36,7 +36,7 @@ class TGBot{
                 if(isset($this->photo)){
                     $this->photo_name = $this->update['message']['photo']['file_name'];
                     $this->photo_mime_type = $this->update['message']['photo']['mime_type'];
-                    $this->photo_file_id = $this->update['message']['photo']['file_id'];
+                    $this->photo_file_id = $this->update['message']['photo'][0]['file_id'];
                     $this->photo_file_size = $this->update['message']['photo']['file_size'];
                 }
                 if(isset($this->document)){
