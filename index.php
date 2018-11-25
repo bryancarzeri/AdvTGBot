@@ -4,7 +4,7 @@
   file, You can obtain one at http://mozilla.org/MPL/2.0/.*/
 
 include 'TGBot.php';
-$TGBot = new TGBot(file_get_contents("php://input"), 'FPAM', $_GET['fpam'], $_GET['token']);
+$TGBot = new TGBot(file_get_contents('php://input'), 'FPAM', $_GET['fpam'], $_GET['token']);
 $TGBot->SecTest();
 include 'conf.php';
 include 'mysql.php';
