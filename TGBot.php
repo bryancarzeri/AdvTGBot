@@ -460,4 +460,13 @@ class TGBot
 
         return self::Request('/sendChatAction', $args);
     }
+
+    public function getFile($fileID)
+    {
+        $args = [
+            'file_id' => $fileID
+        ];
+
+        return self::Request('/getFile', $args);
+    }
 }
