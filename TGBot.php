@@ -469,7 +469,7 @@ class TGBot
     public function getFile($fileID)
     {
         $args = [
-            'file_id' => $fileID
+            'file_id' => $fileID,
         ];
 
         return self::Request('/getFile', $args);
