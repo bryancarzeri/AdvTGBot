@@ -32,6 +32,7 @@ class TGBot
             $this->document = $this->update['message']['document'];
             $this->photo = $this->update['message']['photo'];
             $this->video = $this->update['message']['video'];
+            $this->location = $this->update['message']['location'];
             if ($this->type == 'supergroup' or $this->type == 'group' or $this->type == 'channel') {
                 $this->title = $this->update['message']['chat']['title'];
                 if ($this->type == 'group') {
@@ -55,6 +56,10 @@ class TGBot
                 $this->video_mime_type = $this->update['message']['video']['mime_type'];
                 $this->video_file_id = $this->update['message']['video']['file_id'];
                 $this->video_file_size = $this->update['message']['video']['file_size'];
+            }
+            if (isset($this->location)) {
+                $this->longitude = $this->update['message']['location']['longitude'];
+                $this->latitude = $this->update['message']['location']['latitude'];
             }
             $this->text = $this->update['message']['text'];
             $this->message_id = $this->update['message']['message_id'];
@@ -123,7 +128,7 @@ class TGBot
                     $this->edit_date = $this->update['edited_message']['edit_date'];
                     $this->location = $this->update['edited_message']['location'];
                     if (isset($this->location)) {
-                        $this->edited_longitudine = $this->update['edited_message']['location']['longitude'];
+                        $this->edited_longitude = $this->update['edited_message']['location']['longitude'];
                         $this->edited_latitude = $this->update['edited_message']['location']['latitude'];
                     }
                 }
@@ -150,7 +155,7 @@ class TGBot
                     $this->reply_to_message_is_bot = $this->update['edited_channel_post']['message']['reply_to_message']['from']['is_bot'];
                     $this->location = $this->update['edited_channel_post']['location'];
                     if (isset($this->location)) {
-                        $this->edited_longitudine = $this->update['edited_channel_post']['location']['longitude'];
+                        $this->edited_longitude = $this->update['edited_channel_post']['location']['longitude'];
                         $this->edited_latitude = $this->update['edited_channel_post']['location']['latitude'];
                     }
                 }
