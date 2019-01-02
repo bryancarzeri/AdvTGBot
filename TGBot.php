@@ -556,17 +556,17 @@ class TGBot
 
         return self::Request('/getChat', $args);
     }
-  
+
     public function setChatStickerSet($chat_id, $sticker_set_name)
     {
         $args = [
-            'chat_id' => $chat_id,
+            'chat_id'          => $chat_id,
             'sticker_set_name' => $sticker_set_name,
         ];
 
         return self::Request('/setChatStickerSet', $args);
     }
-  
+
     public function deleteChatStickerSet($chat_id)
     {
         $args = [
@@ -575,7 +575,7 @@ class TGBot
 
         return self::Request('/deleteChatStickerSet', $args);
     }
-  
+
     public function getChatAdministrators($chat_id)
     {
         $args = [
@@ -584,7 +584,7 @@ class TGBot
 
         return self::Request('/getChatAdministrators', $args);
     }
-  
+
     public function getChatMembersCount($chat_id)
     {
         $args = [
@@ -593,7 +593,7 @@ class TGBot
 
         return self::Request('/getChatMembersCount', $args);
     }
-  
+
     public function getChatMember($chat_id, $user_id)
     {
         $args = [
@@ -603,17 +603,17 @@ class TGBot
 
         return self::Request('/getChatMember', $args);
     }
-  
+
     public function setChatPhoto($chat_id, $photo)
     {
         $args = [
             'chat_id' => $chat_id,
-            'photo' => $photo,
+            'photo'   => $photo,
         ];
 
         return self::Request('/setChatPhoto', $args);
     }
-  
+
     public function deleteChatPhoto($chat_id)
     {
         $args = [
@@ -622,18 +622,20 @@ class TGBot
 
         return self::Request('/deleteChatPhoto', $args);
     }
-  
+
     public function kickChatMember($chat_id, $user_id, $until_date = '')
     {
         $args = [
             'chat_id' => $chat_id,
             'user_id' => $user_id,
         ];
-        if(!empty($until_date)) $args['until_date'] = $until_date;
+        if (!empty($until_date)) {
+            $args['until_date'] = $until_date;
+        }
 
         return self::Request('/kickChatMember', $args);
     }
-  
+
     public function unbanChatMember($chat_id, $user_id)
     {
         $args = [
@@ -643,36 +645,38 @@ class TGBot
 
         return self::Request('/unbanChatMember', $args);
     }
-  
+
     public function restrictChatMember($chat_id, $user_id, $can_send_messages = false, $can_send_media_messages = false, $can_send_other_messages = false, $can_add_web_page_previews = false, $until_date = '')
     {
         $args = [
-            'chat_id' => $chat_id,
-            'user_id' => $user_id,
-            'can_send_messages' => $can_send_messages,
-            'can_send_media_messages' => $can_send_media_messages,
-            'can_send_other_messages' => $can_send_other_messages,
+            'chat_id'                   => $chat_id,
+            'user_id'                   => $user_id,
+            'can_send_messages'         => $can_send_messages,
+            'can_send_media_messages'   => $can_send_media_messages,
+            'can_send_other_messages'   => $can_send_other_messages,
             'can_add_web_page_previews' => $can_add_web_page_previews,
         ];
-        if(!empty($until_date)) $args['until_date'] = $until_date;
+        if (!empty($until_date)) {
+            $args['until_date'] = $until_date;
+        }
 
         return self::Request('/unbanChatMember', $args);
     }
-  
+
     public function promoteChatMember($chat_id, $user_id, $can_change_info = true, $can_post_messages = true, $can_edit_messages = true, $can_delete_messages = true, $can_invite_users = true, $can_restrict_members = true, $can_pin_messages = true, $can_promote_members = true)
     {
-        #can_post_messages, can_edit_messages are only available for channels
+        //can_post_messages, can_edit_messages are only available for channels
         $args = [
-            'chat_id' => $chat_id,
-            'user_id' => $user_id,
-            'can_change_info' => $can_change_info,
-            'can_post_messages' => $can_post_messages,
-            'can_edit_messages' => $can_edit_messages,
-            'can_delete_messages' => $can_delete_messages,
-            'can_invite_users' => $can_invite_users,
+            'chat_id'              => $chat_id,
+            'user_id'              => $user_id,
+            'can_change_info'      => $can_change_info,
+            'can_post_messages'    => $can_post_messages,
+            'can_edit_messages'    => $can_edit_messages,
+            'can_delete_messages'  => $can_delete_messages,
+            'can_invite_users'     => $can_invite_users,
             'can_restrict_members' => $can_restrict_members,
-            'can_pin_messages' => $can_pin_messages,
-            'can_promote_members' => $can_promote_members,
+            'can_pin_messages'     => $can_pin_messages,
+            'can_promote_members'  => $can_promote_members,
         ];
 
         return self::Request('/promoteChatMember', $args);
