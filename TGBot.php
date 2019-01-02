@@ -474,58 +474,62 @@ class TGBot
 
         return self::Request('/getFile', $args);
     }
-  
+
     public function getUserProfilePhotos($user_id, $offset = '', $limit = '')
     {
         $args = [
-            'user_id' => $user_id
+            'user_id' => $user_id,
         ];
-        if(!empty($limit)) $args['limit'] = $limit;
-        if(!empty($offset)) $args['offset'] = $offset;
+        if (!empty($limit)) {
+            $args['limit'] = $limit;
+        }
+        if (!empty($offset)) {
+            $args['offset'] = $offset;
+        }
 
         return self::Request('/getUserProfilePhotos', $args);
     }
-  
+
     public function exportChatInviteLink($chat_id)
     {
         $args = [
-            'chat_id' => $chat_id
+            'chat_id' => $chat_id,
         ];
 
         return self::Request('/exportChatInviteLink', $args);
     }
-  
+
     public function setChatTitle($chat_id, $title)
     {
         $args = [
             'chat_id' => $chat_id,
-            'title' => $title
+            'title'   => $title,
         ];
 
         return self::Request('/setChatTitle', $args);
     }
-  
+
     public function setChatDescription($chat_id, $description)
     {
         $args = [
-            'chat_id' => $chat_id,
-            'description' => $description
+            'chat_id'     => $chat_id,
+            'description' => $description,
         ];
 
         return self::Request('/setChatDescription', $args);
     }
-  
+
     public function pinChatMessage($chat_id, $message_id, $disable_notification = false)
     {
         $args = [
-            'chat_id' => $chat_id,
-            'message_id' => $message_id,
-            'disable_notification' => $disable_notification
+            'chat_id'              => $chat_id,
+            'message_id'           => $message_id,
+            'disable_notification' => $disable_notification,
         ];
 
         return self::Request('/pinChatMessage', $args);
     }
-  
+
     public function unpinChatMessage($chat_id)
     {
         $args = [
@@ -534,7 +538,7 @@ class TGBot
 
         return self::Request('/unpinChatMessage', $args);
     }
-  
+
     public function leaveChat($chat_id)
     {
         $args = [
@@ -543,7 +547,7 @@ class TGBot
 
         return self::Request('/leaveChat', $args);
     }
-  
+
     public function getChat($chat_id)
     {
         $args = [
