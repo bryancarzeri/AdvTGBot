@@ -1,4 +1,4 @@
-# Benvenuto nell'installazione di EasyTGBot!
+# Benvenuto nell'installazione di AdvTGBot!
 _Prima di tutto, specifichiamo che per utilizzare EasyTGBot bisogna avere una conoscenza almeno minima di PHP_
 
 ## Requisiti:
@@ -7,7 +7,7 @@ _Prima di tutto, specifichiamo che per utilizzare EasyTGBot bisogna avere una co
 3. Avere un WebServer
 
 ## Installazione:
-_Ora procediamo all'installazione di EasyTG! La guida deve essere seguita passo passo._ 
+_Ora procediamo all'installazione di AdvTG! La guida deve essere seguita passo passo._ 
 * Creare una cartella ed inserire i file di EasyTG (La cartella deve essere accessibile dal web.)
 * Avviare [questo](https://t.me/EasyTGBot) bot e cliccare su "Genera Key"
 * Salvare momentaneamente la key in un file.
