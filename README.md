@@ -8,10 +8,10 @@ _Prima di tutto, specifichiamo che per utilizzare EasyTGBot bisogna avere una co
 
 ## Installazione:
 _Ora procediamo all'installazione di AdvTG! La guida deve essere seguita passo passo._ 
-* Creare una cartella ed inserire i file di EasyTG (La cartella deve essere accessibile dal web.)
+* Creare una cartella ed inserire i file di AdvTG (La cartella deve essere accessibile dal web.)
 * Avviare [questo](https://t.me/EasyTGBot) bot e cliccare su "Genera Key"
 * Salvare momentaneamente la key in un file.
-* Aprire il file index.php nella cartella di EasyTG e modificare la stringa "FPAM" con la key ricevuta dal bot.
+* Aprire il file index.php nella cartella di AdvTG e modificare la stringa "FPAM" con la key ricevuta dal bot.
 
 ## Settare il webhook:
 **_A cosa serve il webhook?_**
