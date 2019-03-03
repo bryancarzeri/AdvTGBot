@@ -660,7 +660,7 @@ class TGBot
             $args['until_date'] = $until_date;
         }
 
-        return self::Request('/unbanChatMember', $args);
+        return self::Request('/restrictChatMember', $args);
     }
 
     public function promoteChatMember($chat_id, $user_id, $can_change_info = true, $can_post_messages = true, $can_edit_messages = true, $can_delete_messages = true, $can_invite_users = true, $can_restrict_members = true, $can_pin_messages = true, $can_promote_members = true)
