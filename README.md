@@ -24,7 +24,7 @@ _Ovviamente le {} devono essere rimosse_
 * {KEY} = Key data dal bot che abbiamo salvato in precendeza
 
 https://api.telegram.org/bot{TOKEN}/setwebhook?url=https://{DOMAIN}/{DIRECTORY}?fpam={KEY}%26token={TOKEN}
-Gruppo di supporto: https://t.me/joinchat/KNoUd0twao2Q6ChD9mYfKQ
+Per supporto visita la sezione issues di github
 
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this
