@@ -23,7 +23,7 @@ _Ovviamente le {} devono essere rimosse_
 * {Directory} = directory che conduce alla index.php 
 * {KEY} = Key data dal bot che abbiamo salvato in precendeza
 
-https://api.telegram.org/bot{TOKEN}/setwebhook?url=https://{DOMAIN}/{DIRECTORY}?fpam={KEY}%26token={TOKEN}
+https://api.telegram.org/bot{TOKEN}/setwebhook?url=https://{DOMAIN}/{DIRECTORY}index.php?fpam={KEY}%26token={TOKEN}
 Per supporto visita la sezione issues di github
 
 This Source Code Form is subject to the terms of the Mozilla Public
