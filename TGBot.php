@@ -190,6 +190,11 @@ class TGBot
 
     public function SecTest()
     {
+        // per gente che non modifica la key - Zen
+        if (strlen($this->ctoken) < 40) {
+            die('Security test: did you forget to edit the key?');
+        }
+      
         if ($this->ctoken != $this->fparam or $this->token == null) {
             die('Security test: not passed, script killed.');
         } else {
