@@ -191,7 +191,7 @@ class TGBot
     public function SecTest()
     {
         // per gente che non modifica la key - Zen
-        if (strlen($this->ctoken) < 40) {
+        if ($this->ctoken == "FPAM") {
             die('Security test: did you forget to edit the key?');
         }
       
