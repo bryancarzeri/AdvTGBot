@@ -394,7 +394,7 @@ class TGBot
         return self::Request('/sendAudio', $args);
     }
 
-    public function sendDocument($chat_id, $document, $caption = null, $reply_to_message_id = null, $reply_markup = false, $thumb = null, $parse_mode = null, $disable_notification = false)
+    public function sendDocument($chat_id, $document, $caption = null, $reply_to_message_id = null, $reply_markup = false, $button_type = 'inline', $thumb = null, $parse_mode = null, $disable_notification = false)
     {
         if ($parse_mode == null) {
             $parse_mode = $this->settings['parse_mode'];
