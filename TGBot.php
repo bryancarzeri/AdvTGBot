@@ -686,4 +686,31 @@ class TGBot
 
         return self::Request('/promoteChatMember', $args);
     }
+  
+    public function sendPoll($chat_id, $question, $options, $disable_notification = false, $reply_to_message_id = false, $reply_markup = false)
+    {
+        $args = [
+            'chat_id'              => $chat_id,
+            'question'             => $question,
+            'options'              => $options,
+            'disable_notification' => $disable_notification,
+            'reply_to_message_id'  => $reply_to_message_id
+        ];
+        if($reply_markup){
+            $args['reply_markup'] = ['inline_keyboard' => $reply_markup];
+        }
+        return self::Request('/sendPoll', $args);
+    }
+  
+    public function stopPoll($chat_id, $message_id, $reply_markup = false)
+    {
+        $args = [
+            'chat_id'              => $chat_id,
+            'message_id'           => $message_id
+        ];
+        if($reply_markup){
+            $args['reply_markup'] = ['inline_keyboard' => $reply_markup];
+        }
+        return self::Request('/stopPoll', $args);
+    }
 }
