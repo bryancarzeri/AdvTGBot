@@ -19,7 +19,7 @@ if ($TGBot->settings['adminMySQL']) {
     $la = $la->fetch(\PDO::FETCH_ASSOC);
     if ($TGBot->chat_id != $la['chat_id']) {
         $insertprep = $TGBot->mdb->prepare("INSERT INTO $TGBot->table_name (chat_id, first_name, last_name, username, action, title, type, to_update) VALUES (?,?,?,?,?,?,?,?)");
-        if ($TGBot->type == 'supergroup' or $TGBot->type == 'group' or $TGBot->type == 'channel') {
+        if (in_array($TGBot->type, ['supergroup','group','channel'])) {
             $insertprep->execute([$TGBot->chat_id, null, null, null, 'none', $TGBot->title, $TGBot->type, true]);
         } else {
             $insertprep->execute([$TGBot->chat_id, $TGBot->first_name, $TGBot->last_name, $TGBot->username, 'none', null, $TGBot->type, true]);
