@@ -270,6 +270,10 @@ class TGBot
 
     public function sendMessage($chat_id, $text, $reply_markup = false, $button_type = 'inline', $reply_to_message_id = null, $parse_mode = null, $disable_web_page_preview = null)
     {
+        if($disable_web_page_preview == null){
+            $disable_web_page_preview = $this->settings['disable_web_page_preview'];
+        }
+      
         if ($parse_mode == null) {
             $parse_mode = $this->settings['parse_mode'];
         }
@@ -278,7 +282,7 @@ class TGBot
             'text'                     => $text,
             'parse_mode'               => $parse_mode,
             'reply_to_message_id'      => $reply_to_message_id,
-            'disable_web_page_preview' => $this->settings['disable_web_page_preview'],
+            'disable_web_page_preview' => $disable_web_page_preview,
         ];
         if ($reply_markup) {
             if ($button_type == 'inline') {
