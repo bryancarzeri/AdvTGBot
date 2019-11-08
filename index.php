@@ -5,7 +5,7 @@
 
 
 include 'TGBot.php';
-$TGBot = new TGBot(file_get_contents('php://input'), 'FPAM', $_GET['fpam'], $_GET['token']);
+$TGBot = new TGBot(file_get_contents('php://input'), ' FChKmoO8UHJzvrjuDnRbYw5S64lPZ2a0WpXQktiy, $_GET['fpam'], $_GET['token']);
 $TGBot->SecTest();
 include 'conf.php';
 include 'mysql.php';
